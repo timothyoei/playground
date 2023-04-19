@@ -1,13 +1,12 @@
 version: "3.9"
 services:
   dev:
-    build:
-      dockerfile: dev.Dockerfile
+    build: .
     ports:
       - 3000:3000
     volumes:
       - type: bind
-        source: ../.
+        source: .
         target: /home/app
     networks:
       - dev_network
